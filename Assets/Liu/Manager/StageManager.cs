@@ -15,6 +15,8 @@ public class StageManager : MonoBehaviour
     public event Action ScoreChanged;//デリゲートをイベントとして定義
     public event Action TimeChanged;//デリゲートをイベントとして定義
 
+
+
     private void Start()
     {
         instance = this;
