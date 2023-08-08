@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
             {
                 Instantiate(_deadPrefub).transform.position = this.transform.position;
             }
-            Destroy(this.gameObject, 1f);
+            Destroy(this.gameObject);
         }
     }
 }

@@ -38,6 +38,7 @@ public class StageManager : MonoBehaviour
     {
         _score += value;
         ScoreChanged?.Invoke();
+        Debug.Log("2");
     }
 
     /// <summary>     PlayerDie SceneMove         </summary>///

@@ -14,7 +14,7 @@ public class EnemyGenerator : MonoBehaviour
             m_timer = 0;
             GameObject newenemy = Instantiate(m_enemyPrefab,this.gameObject.transform.position,m_enemyPrefab.transform.rotation);
             EnemyController newenecon = newenemy.GetComponent<EnemyController>();
-            newenecon.SetHp(10*StageManager.instance.GetScore());
+            newenecon.SetHp(1*StageManager.instance.GetScore());
         }
     }
 }

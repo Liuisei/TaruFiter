@@ -13,7 +13,10 @@ public class EnemyController : MonoBehaviour
     {
         if (_hp <= 0)
         {
+            StageManager.instance.AddScore(10);
+            Debug.Log("aa");
             Destroy(this.gameObject);
+
         }
     }
     public void damege(int n)

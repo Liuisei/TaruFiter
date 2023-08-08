@@ -38,6 +38,8 @@ public class StageUICont : MonoBehaviour
     public void UpdateScoreText()
     {
         _scoreTMP.SetText(StageManager.instance.GetScore().ToString());
+        Debug.Log("3");
+
     }
 
     public void UpdateTimeText()
