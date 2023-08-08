@@ -7,10 +7,8 @@ public class StageManager : MonoBehaviour
 {
     public static StageManager instance = null;
 
-    int _score = 99;
+    int _score = 10;
     float _time = 0;
-
-
 
     public event Action ScoreChanged;//デリゲートをイベントとして定義
     public event Action TimeChanged;//デリゲートをイベントとして定義
