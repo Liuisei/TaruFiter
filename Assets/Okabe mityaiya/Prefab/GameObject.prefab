@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_enemyPrefab: {fileID: 8852877115293018240, guid: e8b7633a5b47dcf44b44e213692dc5db, type: 3}
-  m_interval: 0.25
+  m_interval: 0.515
 --- !u!95 &1646701322684048519
 Animator:
   serializedVersion: 5

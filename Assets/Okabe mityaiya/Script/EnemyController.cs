@@ -4,7 +4,12 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField]Å@int _hp;
 
-   public void SetHp(int value)
+    private void Start()
+    {
+        Destroy(gameObject,5);
+    }
+
+    public void SetHp(int value)
     {
         _hp = value;
     }
@@ -16,7 +21,6 @@ public class EnemyController : MonoBehaviour
             StageManager.instance.AddScore(10);
             Debug.Log("aa");
             Destroy(this.gameObject);
-
         }
     }
     public void damege(int n)
