@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,10 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField] float _gunRate = 0.5f;
     float _rateTimer;
     Rigidbody2D _rb;
-    int _bulletDamage = 5;
     [SerializeField] GameObject _deadPrefub;
     [SerializeField] GameObject _bulletPrefub;
-    public int BulletDamage { get { return _bulletDamage; } }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +19,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_gunRate + "" + _bulletDamage);
         _rateTimer += Time.deltaTime;
         float _hori = Input.GetAxisRaw("Horizontal");
         _rb.velocity = new Vector3(_hori*_moveSpeed, 0);
