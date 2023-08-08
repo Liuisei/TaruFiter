@@ -46,9 +46,16 @@ public class Player : MonoBehaviour
                 Instantiate(_deadPrefub).transform.position = this.transform.position;
             }
             
-            Destroy(this.gameObject);
             _gameOverText.SetActive(true);
             _gameOverScore.text = "score : " + StageManager.instance.GetScore();
+            Invoke("move",1);
         }
+    }
+
+    public void move()
+    {
+        GameManager.instance.SceneMove(0);
+        Destroy(this.gameObject);
+
     }
 }

@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+  
     public void SceneMove(int sceneNum )
     {
         SceneManager.LoadScene(sceneNum);
