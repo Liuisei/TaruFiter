@@ -1,6 +1,7 @@
 
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,10 +11,14 @@ public class Player : MonoBehaviour
     Rigidbody2D _rb;
     [SerializeField] GameObject _deadPrefub;
     [SerializeField] GameObject _bulletPrefub;
+    [SerializeField] GameObject _gameOverText;
+    bool _gameOver = false;
+    public bool GameOver { get { return _gameOver; } }
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _gameOverText.GetComponent<Text>().enabled = false;
     }
 
     // Update is called once per frame
@@ -39,7 +44,9 @@ public class Player : MonoBehaviour
             {
                 Instantiate(_deadPrefub).transform.position = this.transform.position;
             }
+            
             Destroy(this.gameObject);
+            _gameOverText.GetComponent<Text>().enabled = true;
         }
     }
 }
