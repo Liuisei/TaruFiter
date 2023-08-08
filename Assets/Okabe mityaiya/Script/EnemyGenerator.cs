@@ -12,7 +12,9 @@ public class EnemyGenerator : MonoBehaviour
         if(m_timer > m_interval)
         {
             m_timer = 0;
-            Instantiate(m_enemyPrefab,this.gameObject.transform.position,m_enemyPrefab.transform.rotation);
+            GameObject newenemy = Instantiate(m_enemyPrefab,this.gameObject.transform.position,m_enemyPrefab.transform.rotation);
+            EnemyController newenecon = newenemy.GetComponent<EnemyController>();
+            newenecon.SetHp(10*StageManager.instance.GetScore());
         }
     }
 }
