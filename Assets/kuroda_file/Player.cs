@@ -12,13 +12,14 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject _deadPrefub;
     [SerializeField] GameObject _bulletPrefub;
     [SerializeField] GameObject _gameOverText;
+    [SerializeField] Text _gameOverScore;
     bool _gameOver = false;
     public bool GameOver { get { return _gameOver; } }
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _gameOverText.GetComponent<Text>().enabled = false;
+        _gameOverText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,7 +47,8 @@ public class Player : MonoBehaviour
             }
             
             Destroy(this.gameObject);
-            _gameOverText.GetComponent<Text>().enabled = true;
+            _gameOverText.SetActive(true);
+            _gameOverScore.text = "score : " + StageManager.instance.GetScore();
         }
     }
 }
