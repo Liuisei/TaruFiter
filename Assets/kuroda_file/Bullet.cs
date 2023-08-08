@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     Rigidbody2D _rb;
     [SerializeField]float _bulletSpeed = 5;
-    int _bulletDamage;
+    int _bulletDamage = 5;
     GameObject _player;
     // Start is called before the first frame update
     void Start()

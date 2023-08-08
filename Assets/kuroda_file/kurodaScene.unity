@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 5
   _gunRate: 0.5
-  _deadPrefub: {fileID: 0}
+  _deadPrefub: {fileID: 4385204686582203604, guid: 52635747b0f0d7e42a9a94ce21a7a416, type: 3}
   _bulletPrefub: {fileID: 2455219113582483586, guid: 52ff87950c4c46247a5475b410409135, type: 3}
 --- !u!1 &922965052
 GameObject:

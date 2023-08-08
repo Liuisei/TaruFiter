@@ -20,11 +20,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_rateTimer);
+        Debug.Log(_gunRate + "" + _bulletDamage);
         _rateTimer += Time.deltaTime;
         float _hori = Input.GetAxisRaw("Horizontal");
         _rb.velocity = new Vector3(_hori*_moveSpeed, 0);
-        if (Input.GetButtonDown("Fire1") || Input.GetKey(KeyCode.Space))
+        if (Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space))
         {
             if(_rateTimer > _gunRate)
             {
